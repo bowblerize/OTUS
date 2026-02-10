@@ -8,7 +8,7 @@ pvcreate $NEW_DISK
 vgcreate $VG $NEW_DISK
 lvcreate -y -n $LV -l +100%FREE /dev/$VG
 
-mkfs.ext4 -y /dev/$VG/$LV
+mkfs.ext4 -F /dev/$VG/$LV
 
 mkdir -p /mnt/$VG
 
@@ -25,6 +25,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 update-initramfs -u
 
-reboot
-
 EOF
+
+init 6
