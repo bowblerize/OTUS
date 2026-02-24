@@ -1,0 +1,7 @@
+- name: Лабораторные работы
+  hosts: my_servers
+  become: yes
+
+  roles:
+    - role: lab8
+      tags: ['lab8']
