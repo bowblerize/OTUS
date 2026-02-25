@@ -1,7 +1,7 @@
 - name: Copy config to /etc/default
   ansible.builtin.copy:
-    src: lab8.conf
-    dest: /etc/default/lab8.conf
+    src: checklog.conf
+    dest: /etc/default/checklog.conf
     owner: root
     group: root
     mode: '0644'
@@ -34,7 +34,12 @@
   ansible.builtin.systemd_service:
     daemon_reload: true
 
-- name: Start checklog.service
+- name: Start checklog.timer
   ansible.builtin.systemd_service:
     name: checklog.timer
+    state: started
+
+- name: First start checklog.service
+  ansible.builtin.systemd_service:
+    name: checklog.service
     state: started

@@ -1,4 +1,12 @@
 - name: Мониторинг логов
   ansible.builtin.import_tasks:
     file: log.yml
+
+- name: spawn-fcgi
+  ansible.builtin.import_tasks:
+    file: spawn-fcgi.yml
+
+- name: Nginx
+  ansible.builtin.import_tasks:
+    file: nginx.yml
     
