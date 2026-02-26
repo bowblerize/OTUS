@@ -1,0 +1,8 @@
+[Unit]
+Description=Check log
+
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/default/checklog.conf
+ExecStart=/opt/checklog.sh $KEYWORD $LOG_FILE

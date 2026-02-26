@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for checklog
+
+[Timer]
+OnUnitActiveSec=30
+Unit=checklog.service
+
+[Install]
+WantedBy=multi-user.target
