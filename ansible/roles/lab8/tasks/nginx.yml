@@ -1,3 +1,8 @@
+- name: Stop Apache
+  ansible.builtin.systemd_service:
+    name: apache2
+    state: stopped
+
 - name: Install nginx
   ansible.builtin.apt:
     pkg: nginx
