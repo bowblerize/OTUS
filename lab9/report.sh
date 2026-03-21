@@ -1,10 +1,10 @@
 #!/bin/bash
 
-LOCK_LOG_FILE=
-LOG_FILE=
+LOCK_LOG_FILE= #Пусть до lock файла
+LOG_FILE= #Путь до файла с логами
 LAST_TIME=0
-TOP_SIZE=
-SEND=
+TOP_SIZE= 
+SEND= #адрес почты куда отправлять отчет
 
 
 #export $(cat /opt/report.conf)
