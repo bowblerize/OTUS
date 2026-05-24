@@ -1,0 +1,22 @@
+---
+- name: install nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+  notify: restart nginx
+
+- name: deploy nginx config from template
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart nginx
+
+- name: enable nginx in systemd
+  systemd:
+    name: nginx
+    enabled: yes
+    state: started
