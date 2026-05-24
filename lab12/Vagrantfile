@@ -1,0 +1,14 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-24.04"
+  config.vm.hostname = "lab11.otus"
+  config.vm.network "private_network", ip: "192.168.56.11"
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook  = "../ansible/labs.yml"
+    ansible.tags      = "lab11"
+    ansible.become    = true
+    ansible.groups    = {
+      "my_servers" => ["default"]
+    }
+  end
+end
