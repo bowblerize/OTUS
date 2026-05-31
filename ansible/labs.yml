@@ -5,5 +5,5 @@
   roles:
     - role: lab8
       tags: ['lab8']
-    - role: lab11
-      tags: ['lab11']
+    - role: lab12
+      tags: ['lab12']
