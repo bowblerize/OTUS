@@ -21,7 +21,7 @@ setsebool:
 
 добавление нестандартного порта в имеющийся тип:
 
-![Port]((https://github.com/bowblerize/OTUS/blob/main/resources/lab11port.png)
+![Port](https://github.com/bowblerize/OTUS/blob/main/resources/lab11port.png)
 
 модуль SELinux:
 
