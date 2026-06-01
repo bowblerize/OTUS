@@ -4,21 +4,33 @@
 
   1) Запустить nginx на нестандартном порту 3-мя разными способами:
     переключатели setsebool;
+
     добавление нестандартного порта в имеющийся тип;
+
     формирование и установка модуля SELinux.
+
   2) развернуть приложенный стенд https://github.com/mbfx/otus-linux-adm/tree/master/selinux_dns_problems;
     выяснить причину неработоспособности механизма обновления зоны (см. README);
+
     предложить решение (или решения) для данной проблемы;
+
     выбрать одно из решений для реализации, предварительно обосновав выбор;
+
     реализовать выбранное решение и продемонстрировать его работоспособность.
 
 ### Задание 1 
 
 setsebool:
 
+![Setsebool](https://github.com/bowblerize/OTUS/blob/main/resources/lab11setsebool.png)
+
 добавление нестандартного порта в имеющийся тип:
 
+![Port]((https://github.com/bowblerize/OTUS/blob/main/resources/lab11port.png))
+
 модуль SELinux:
+
+![Module](https://github.com/bowblerize/OTUS/blob/main/resources/lab11module.png)
 
 ### Задание 2
 
